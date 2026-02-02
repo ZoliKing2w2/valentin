@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Valentin 💗</title>
+<style>
+body {
+  background: pink;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.card {
+  background: #fff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 400px;
+}
+img {
+  width: 100%;
+  border-radius: 15px;
+}
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+#yes { background: hotpink; color: white; }
+#no { background: #ddd; }
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h2>Regina 💗</h2>
+  <p>Leszel a Valentin-napom?</p>
+
+  <img src="kep.jpg" alt="Regina">
+
+  <br><br>
+  <button id="yes" onclick="yes()">Igen</button>
+  <button id="no" onmouseover="move()">Nem</button>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+function move() {
+  const b = document.getElementById("no");
+  b.style.position = "absolute";
+  b.style.left = Math.random()*300 + "px";
+  b.style.top = Math.random()*300 + "px";
+}
+
+function yes() {
+  document.getElementById("msg").innerHTML =
+  "Sejtettem 😍<br>Alig várom a randinkat, Regina! 💗";
+}
+</script>
+</body>
+</html>
